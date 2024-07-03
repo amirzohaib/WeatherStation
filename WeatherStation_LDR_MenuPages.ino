@@ -165,6 +165,12 @@ void displayTemperature(){
   display.print("Pressure: ");
   display.print(bmp.readPressure()/100.0F);
   display.print(" hpa");
+  display.setCursor(0, 54);
+  display.setTextSize(1);
+  int ldrReading = map(analogRead(ldr), 0, 4095, 100, 0);
+  display.print("Luminosity: ");
+  display.print(ldrReading);
+  display.print(" %");
   //displayIndicator(displayScreenNum);
   display.display();
  
@@ -182,7 +188,21 @@ void displayHumidity(){
   //float humidity = humidity.relative_humidity;
   display.print(humidity.relative_humidity);
   display.print(" %");
+
   display.setCursor(0, 34);
+  display.setTextSize(1);
+  display.print("Pressure: ");
+  display.print(bmp.readPressure()/100.0F);
+  display.print(" hpa");
+
+  display.setCursor(0, 44);
+  display.setTextSize(1);
+  int ldrReading = map(analogRead(ldr), 0, 4095, 100, 0);
+  display.print("Luminosity: ");
+  display.print(ldrReading);
+  display.print(" %");
+
+  display.setCursor(0, 54);
   display.setTextSize(1);
   display.print("Temperature: ");
   display.print(bmp.readTemperature());
@@ -190,11 +210,6 @@ void displayHumidity(){
   display.print(" ");
   display.write(167);
   display.print("C");
-  display.setCursor(0, 44);
-  display.setTextSize(1);
-  display.print("Pressure: ");
-  display.print(bmp.readPressure()/100.0F);
-  display.print(" hpa");
   //displayIndicator(displayScreenNum);
   display.display();
  
@@ -213,7 +228,15 @@ void displayPressure(){
   display.print(bmp.readPressure()/100.0F);
   display.setTextSize(1);
   display.print(" hpa");
+
   display.setCursor(0, 34);
+  display.setTextSize(1);
+  int ldrReading = map(analogRead(ldr), 0, 4095, 100, 0);
+  display.print("Luminosity: ");
+  display.print(ldrReading);
+  display.print(" %");
+  
+  display.setCursor(0, 44);
   display.setTextSize(1);
   display.print("Temperature: ");
   display.print(bmp.readTemperature());
@@ -221,7 +244,8 @@ void displayPressure(){
   display.print(" ");
   display.write(167);
   display.print("C");
-  display.setCursor(0, 44);
+  
+  display.setCursor(0, 54);
   display.setTextSize(1);
   display.print("Humidity: ");
   display.print(humidity.relative_humidity);
@@ -245,6 +269,7 @@ void displayLDR(){
   display.print(ldrReading);
   display.print(" %");
   display.setTextSize(1);
+  
   display.setCursor(0, 34);
   display.print("Temperature: ");
   display.print(bmp.readTemperature());
@@ -252,6 +277,7 @@ void displayLDR(){
   display.cp437(true);
   display.write(167);
   display.print("C");
+  
   display.setCursor(0, 44);
   display.setTextSize(1);
   display.print("Humidity: ");
@@ -259,8 +285,15 @@ void displayLDR(){
   display.print(" %");
   display.setCursor(0, 44);
   //displayIndicator(displayScreenNum);
-  display.display();
+ 
 
+  display.setCursor(0, 54);
+  display.setTextSize(1);
+  display.print("Pressure: ");
+  display.print(bmp.readPressure()/100.0F);
+  display.print(" hpa");
+
+  display.display();
 }
 
 // Display the right screen accordingly to the displayScreenNum
