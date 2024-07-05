@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body { text-align: center; font-family:sans-serif;
+        
+    }
+    
+    button {
+  padding: 0.2em 0.9em;
+  position: relative;
+  top: 20px;
+  background: #efefef;
+  border: none;
+  border-radius: .5rem;
+  color: #a3bfcf;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .05rem;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+  box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+              -6px -6px 10px rgba(255, 255, 255, .5),
+              6px 6px 8px rgba(255, 255, 255, .075),
+              6px 6px 10px rgba(0, 0, 0, .15);
+}
+button:hover {
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+              -2px -2px 4px rgba(255, 255, 255, .4),
+              2px 2px 2px rgba(255, 255, 255, .05),
+              2px 2px 4px rgba(0, 0, 0, .1);
+}
+button:active {
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
+              inset -2px -2px 4px rgba(255, 255, 255, .5),
+              inset 2px 2px 2px rgba(255, 255, 255, .075),
+              inset 2px 2px 4px rgba(0, 0, 0, .15);
+}
+    /* Style the table */
+        .styled-table {
+            
+            width:35%; 
+            margin-left:auto; 
+            margin-right:auto;
+            
+            font-size: 0.9em;
+            font-family: sans-serif;
+            background-color: #efefef;
+            min-width: 350px;
+            border:none;
+    
+            box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+              -6px -6px 10px rgba(255, 255, 255, .5),
+              6px 6px 8px rgba(255, 255, 255, .075),
+              6px 6px 10px rgba(0, 0, 0, .15);
+            border-radius: 5px;
+        }
+
+        /* Style the header */
+        .styled-table thead tr {
+            background-color: #90AEAD;
+            color: black;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        /* Style the table cells */
+        .styled-table th, .styled-table td {
+            padding: 15px 20px;
+            border-radius: 5px;
+        }
+
+        /* Style the table rows */
+        .styled-table tbody tr {
+            border-radius: 5px;
+            /*border-bottom: 1px solid #90AEAD;*/
+        }
+
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #90AEAD;
+        }
+
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 0px solid #009879;
+        }
+
+        /* Style the active row */
+        .styled-table tbody tr.active-row {
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+<body><h1>Weather Staton</h1>
+
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Sensor</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Temperature</td>
+                <td>bmp.temperatureRead</td>
+                
+            </tr>
+            <tr>
+                <td>Pressure</td>
+                <td>bmp.temperatureRead</td>
+                
+            </tr>
+            <tr>
+                <td>Altitude</td>
+                <td>bmp.temperatureRead</td>
+                
+            </tr>
+            <tr>
+                <td>Humidity</td>
+                <td>bmp.temperatureRead</td>
+                
+            </tr>
+            <tr>
+                <td>Luminosity</td>
+                <td>bmp.temperatureRead</td>
+                
+            </tr>
+            
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+     <!-- Refresh button -->
+     <button>Refresh</button>
+   
+    
+</body>
+</html>
