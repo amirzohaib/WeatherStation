@@ -429,6 +429,6 @@ void loop() {
   }
   lastButtonState = reading;
   
-
-
+updateScreen();
+delay(1000); // Pause for 1 Sec
 }
